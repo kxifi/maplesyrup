@@ -4,7 +4,7 @@ cask "maples" do
 
   url "https://example.com/maples.dmg"
   name "Maples"
-  desc "Placeholder for Maples GUI app"
+  desc "The notes app you have been waiting for."
   homepage "https://example.com"
 
   app "Maples.app"
