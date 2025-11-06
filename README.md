@@ -1,4 +1,4 @@
-# maplesyrup
+# maplesyrup 🍁
 
 The reason I decided to go for a fork, is because there is no
 point in recreating something AS simple as a notes app. Plus,
