@@ -6,6 +6,13 @@ export default class NotesView {
         this.onNoteEdit = onNoteEdit;
         this.onNoteDelete = onNoteDelete;
         this.root.innerHTML = `
+        <div class="sort-bar">
+            <ul>
+                <button>Jots</button>
+                <button>Journals</button>
+                <button>Settings</button>
+            </ul>
+        </div>
             <div class="notes__sidebar">
                 <button class="notes__add" type="button">Add Note</button>
                 <div class="notes__list"></div>
