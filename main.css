@@ -1,3 +1,16 @@
+button{
+    padding: 10px;
+    background-color: #F5ECD8;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover{
+    background-color: #D4C4A8;
+    transition: 0.2s linear;
+}
+
 html,
 body {
     height: 100%;
@@ -9,16 +22,12 @@ body {
     height: 100%;
 }
 
-.notes * {
-    font-family: sans-serif;
-}
-
 .notes__sidebar {
     background-color: #F5ECD8;
-    border-right: 0.2rem solid #5B4636;
+    border-right: 0.1rem solid #5B4636;
     flex-shrink: 0;
     overflow-y: auto;
-    padding: 1em;
+    padding: 0.75rem;
     width: 250px;
 }
 
@@ -29,24 +38,32 @@ body {
     color: #F5ECD8;
     cursor: pointer;
     font-size: 1.25em;
-    font-weight: bold;
-    margin-bottom: 1em;
-    padding: 0.75em 0;
+    font-weight:bold;
+    margin: 1em;
+    padding: 0.75rem 0;
     width: 100%;
 }
 
 .notes__add:hover {
     background: #8B7355;
+    transition: 0.15s linear;
 }
 
 .notes__list-item {
     cursor: pointer;
 }
 
+.notes__list-item:hover {
+    background-color: #D4C4A8;
+    border-radius: 7px;
+    transition: 0.2s linear;
+}
+
 .notes__list-item--selected {
     background: #D4C4A8;
     border-radius: 7px;
     font-weight: bold;
+    border: 2px #5B4636 solid;
 }
 
 .notes__small-title,
@@ -56,19 +73,25 @@ body {
 }
 
 .notes__small-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #5B4636;
     font-size: 1.2em;
+    font-weight:normal;
 }
 
 .notes__small-body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #5B4636;
     padding: 0 10px;
+    font-weight: lighter;
 }
 
 .notes__small-updated {
     color: #5B4636;
     font-style: italic;
     text-align: right;
+    font-weight: lighter;
+    font-size:small;
 }
 
 .notes__preview {
@@ -88,36 +111,37 @@ body {
 
 .notes__title {
     background-color: #F5ECD8;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 800;
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 450;
+    font-size: 2.75rem;
     color: #5B4636;
+    margin-top: 5rem;
 }
 
 .notes__body {
-    font-family: serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #F5ECD8;
     flex-grow: 1;
-    font-size: 1.2em;
+    font-size: 1.33rem;
     line-height: 1.5;
-    margin-top: 2em;
+    margin-top: 1.25rem;
     resize: none;
     color: #5B4636;
-    border-radius: 12.5px;
-    padding:12.5px;
+}
+
+::selection {
+    background-color: #D4C4A8;
+    color: black;
 }
 
 .sort-bar{
     display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 5rem;
+    width: 6rem;
     background-color: #F5ECD8;
     color: #5B4636;
-    border-right: 0.2rem #5B4636 solid;
-}
-
-.sort-bar ul{
-    justify-content: space-around;
+    border-right: 0.1rem #5B4636 solid;
+     justify-content: space-around;
     list-style: none;
 }

@@ -7,11 +7,9 @@ export default class NotesView {
         this.onNoteDelete = onNoteDelete;
         this.root.innerHTML = `
         <div class="sort-bar">
-            <ul>
                 <button>Jots</button>
                 <button>Journals</button>
                 <button>Settings</button>
-            </ul>
         </div>
             <div class="notes__sidebar">
                 <button class="notes__add" type="button">Add Note</button>
@@ -19,7 +17,7 @@ export default class NotesView {
             </div>
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
-                <textarea class="notes__body">Take Note...</textarea>
+                <textarea class="notes__body"></textarea>
             </div>
         `;
 
