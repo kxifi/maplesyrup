@@ -10,15 +10,32 @@ export default class App {
         this._refreshNotes();
     }
 
-    _refreshNotes() {
-        const notes = NotesAPI.getAllNotes();
-
-        this._setNotes(notes);
-
-        if (notes.length > 0) {
-            this._setActiveNote(notes[0]);
-        }
+_refreshNotes() {
+    const allNotes = NotesAPI.getAllNotes();
+    let notesToShow;
+    
+    if (this.activeTab === "jots") {
+        notesToShow = allNotes.filter(note => {
+            const wordCount = note.body.split(" ").length;
+            return wordCount <= 75;
+        });
+    } else if (this.activeTab === "journals") {
+        notesToShow = allNotrs.filter(note => {
+            const wordCount = note.body.split(" ").length;
+            return wordCount > 75;
+        });
+        notesToShow = allNotes.filter(note => {
+            this.activeTab
+            // What goes here?
+        });
     }
+
+    this._setNotes(notesToShow);
+
+    if (notesToShow.length > 0) {
+        this._setActiveNote(notesToShow[0]);
+    }
+}
 
     _setNotes(notes) {
         this.notes = notes;
