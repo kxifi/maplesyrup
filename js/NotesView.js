@@ -6,11 +6,36 @@ export default class NotesView {
         this.onNoteEdit = onNoteEdit;
         this.onNoteDelete = onNoteDelete;
         this.root.innerHTML = `
+    <section>
+    <div class="title">
+    <h2>jots</h2>
+    <p>hello</p>
+    </div>
+        <div class="about-center section-center">
+        <article>
+        
+        </article>
+        <article class="about">
         <div class="sort-bar">
-                <button>Jots</button>
-                <button>Journals</button>
-                <button>Settings</button>
-        </div>
+                <div class="btn-container">
+                <button class="tab-btn active" data-id="jots">Jots</button>
+                <button class="tab-btn" data-id="journals">Journals</button>
+                <button class="tab-btn" data-id="settings">Settings</button>
+            </div>
+        </article>
+        <article class="about-content">
+            <div class="content active" id="jots">
+            <h4>Jots</h4>
+            </div>
+                <div class="content active" id="journals">
+                <h4>Journals</h4>
+                </div>
+                    <div class="content active" id="settings">
+                    <h4>Settings</h4>
+                    </div>
+        </article>
+    </div>
+    </section>
             <div class="notes__sidebar">
                 <button class="notes__add" type="button">Add Note</button>
                 <div class="notes__list"></div>

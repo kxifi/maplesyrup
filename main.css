@@ -34,13 +34,15 @@ body {
 .notes__add {
     background: #5B4636;
     border: none;
+    margin: auto;
+    padding: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     border-radius: 7px;
     color: #F5ECD8;
     cursor: pointer;
     font-size: 1.25em;
     font-weight:bold;
-    margin: 1em;
-    padding: 0.75rem 0;
     width: 100%;
 }
 
@@ -51,6 +53,7 @@ body {
 
 .notes__list-item {
     cursor: pointer;
+    margin: 0.15rem;
 }
 
 .notes__list-item:hover {
@@ -127,6 +130,10 @@ body {
     margin-top: 1.25rem;
     resize: none;
     color: #5B4636;
+}
+
+.notes__body:hover{
+    border: #5B4636;
 }
 
 ::selection {
